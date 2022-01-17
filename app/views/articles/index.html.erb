@@ -2,10 +2,11 @@
 <h2>Articles are</h2>
 
 <ul>
-  <% @articles.each do |i| %>
+  <% @articles.each do |article| %>
     <li>
-      <%= i.title %>
-      <%= i.body %>
+      <%= link_to article.title, article %>
     </li>
   <% end %>
 </ul>
+
+<%= link_to "Create a New Article", new_article_path %>
